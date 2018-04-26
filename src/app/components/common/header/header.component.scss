@@ -1,0 +1,19 @@
+header {
+  background-color: #181a27;
+  height: 66px;
+}
+
+.container-fluid {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
