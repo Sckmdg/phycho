@@ -1,5 +1,5 @@
 .item-container {
-  padding-top: 60px;
+  padding: 60px 0;
   position: relative;
 }
 
@@ -61,7 +61,7 @@
 
 .navigation {
   position: absolute;
-  top: calc(50% - 80px);
+  top: calc(50% - 110px);
   font-size: 60px;
   color: #ffffff;
   font-weight: bold;

@@ -47,10 +47,14 @@ export class TestPaperComponent implements OnInit, DoCheck {
     this.currentQuestion += 1;
   }
   onForward(): void {
-    this.currentQuestion += 1;
+    if (this.currentQuestion !== this.questions.length - 1) {
+      this.currentQuestion += 1;
+    }
   }
   onBack(): void {
-    this.currentQuestion -= 1;
+    if (this.currentQuestion !== 0) {
+      this.currentQuestion -= 1;
+    }
   }
   calculateProgress(): void {
     let count = 0;

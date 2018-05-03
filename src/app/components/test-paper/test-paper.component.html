@@ -9,10 +9,22 @@
     </div>
   </div>
 
-  <div class="navigation nav-left" (click)="onBack()">
+  <div
+    (click)="onBack()"
+    [ngClass]="{
+      'navigation nav-left':true,
+      'd-none': currentQuestion === 0
+      }"
+  >
     <
   </div>
-  <div class="navigation nav-right" (click)="onForward()">
+  <div
+    [ngClass]="{
+      'navigation nav-right':true,
+      'd-none':currentQuestion === questions.length - 1
+      }"
+    (click)="onForward()"
+  >
     >
   </div>
 
