@@ -1,40 +1,47 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
 import { Question } from '../../classes/question';
 import { Answer } from '../../classes/answer';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-test-paper',
   templateUrl: './test-paper.component.html',
-  styleUrls: ['./test-paper.component.scss']
+  styleUrls: ['./test-paper.component.scss'],
+  providers: [LanguageService]
 })
 
 export class TestPaperComponent implements OnInit, DoCheck {
+  lang: number;
   questions: Question[];
   answers: Answer[];
-  title: string;
+  title: [String];
   currentQuestion: number;
   currentPercent: number;
-  constructor() { }
+  constructor(
+    private langService: LanguageService
+  ) { }
 
   ngOnInit() {
     this.currentQuestion = 0;
-    this.title = 'My Personality 100-Item';
+    this.lang = this.langService.getLanguage();
+    this.title = ['Моя личность 100 предметов', 'Менин Personality 100-пункту'];
     this.questions = [
-      {question: 'Some question1', value: null},
-      {question: 'Some question2', value: null},
-      {question: 'Some question3', value: null},
-      {question: 'Some question4', value: null},
-      {question: 'Some question5', value: null}
+      {question: ['Вопрос1', 'Суроо1'], value: null},
+      {question: ['Вопрос2', 'Суроо2'], value: null},
+      {question: ['Вопрос3', 'Суроо3'], value: null},
+      {question: ['Вопрос4', 'Суроо4'], value: null},
+      {question: ['Вопрос5', 'Суроо5'], value: null}
     ];
     this.answers = [
-      {title: 'Strongly disagree', value: 1},
-      {title: 'Disagree', value: 2},
-      {title: 'Neither agree nor disagree', value: 3},
-      {title: 'Agree', value: 4},
-      {title: 'Strongly agree', value: 5},
+      {title: ['Не согласен1', 'Макул эмесмин1'], value: 1},
+      {title: ['Не согласен2', 'Макул эмесмин2'], value: 2},
+      {title: ['Можно', 'Алат '], value: 3},
+      {title: ['Согласен1', 'Мен макулмун1'], value: 4},
+      {title: ['Согласен2', 'Мен макулмун2'], value: 5},
     ];
     }
   ngDoCheck(): void {
+    console.log(this);
     this.calculateProgress();
   }
 

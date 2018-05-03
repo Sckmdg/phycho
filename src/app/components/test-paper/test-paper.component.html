@@ -1,11 +1,11 @@
 <app-progress [currentPercent]="currentPercent"></app-progress>
 
 <div class="container-fluid item-container">
-  <p class="test-title">{{title}}</p>
+  <p class="test-title">{{title[lang]}}</p>
 
   <div class="col-md-12 text-center">
     <div class="question">
-      {{questions.length && questions[currentQuestion].question}}
+      {{questions.length && questions[currentQuestion].question[lang]}}
     </div>
   </div>
 
@@ -38,7 +38,7 @@
           'option-selected': answer.value === questions[currentQuestion].value
           }"
         >
-          {{answer.title}}
+          {{answer.title[lang]}}
         </div>
       </div>
     </div>

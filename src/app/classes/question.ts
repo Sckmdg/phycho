@@ -1,4 +1,4 @@
 export class Question {
-  question: string;
+  question: [String];
   value: any;
 }

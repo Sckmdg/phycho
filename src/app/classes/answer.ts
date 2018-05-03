@@ -1,4 +1,4 @@
 export class Answer {
-  title: string;
+  title: [String];
   value: number;
 }
