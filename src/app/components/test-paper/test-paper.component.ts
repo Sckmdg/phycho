@@ -40,8 +40,8 @@ export class TestPaperComponent implements OnInit, DoCheck {
       {title: ['Согласен2', 'Мен макулмун2'], value: 5},
     ];
     }
-  ngDoCheck(): void {
-    console.log(this);
+  ngDoCheck() {
+    this.lang = Number(localStorage.lang);
     this.calculateProgress();
   }
 

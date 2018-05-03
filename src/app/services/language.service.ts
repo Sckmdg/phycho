@@ -11,6 +11,6 @@ export class LanguageService {
   }
   changeLanguage(lang: number): void {
     this.lang = lang;
-    console.log(this.lang);
+    localStorage.setItem('lang', `${lang}`);
   }
 }
