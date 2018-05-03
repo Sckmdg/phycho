@@ -1,3 +1,35 @@
-<p>
-  test-paper works!
-</p>
+<app-progress [currentPercent]="currentPercent"></app-progress>
+
+<div class="container-fluid item-container">
+  <p class="test-title">{{title}}</p>
+
+  <div class="col-md-12 text-center">
+    <div class="question">
+      {{questions.length && questions[currentQuestion].question}}
+    </div>
+  </div>
+
+  <div class="navigation nav-left" (click)="onBack()">
+    <
+  </div>
+  <div class="navigation nav-right" (click)="onForward()">
+    >
+  </div>
+
+  <div class="row">
+    <div class="options" *ngFor="let answer of answers">
+      <div class="option-container">
+        <div
+          (click)="onAnswer(answer.value)"
+          [ngClass]="{
+          'option': true,
+          'option-selected': answer.value === questions[currentQuestion].value
+          }"
+        >
+          {{answer.title}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

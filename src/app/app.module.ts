@@ -5,10 +5,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { FooterComponent } from './components/common/footer/footer.component';
-import { AppRoutingModule } from './app-routing/app-routing.module';
+// import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TestPaperComponent } from './components/test-paper/test-paper.component';
+import { ProgressComponent } from './components/test-paper/progress/progress.component';
+import { ResultsComponent } from './components/test-paper/results/results.component';
 
 
 @NgModule({
@@ -16,11 +18,13 @@ import { TestPaperComponent } from './components/test-paper/test-paper.component
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TestPaperComponent
+    TestPaperComponent,
+    ProgressComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    // AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
