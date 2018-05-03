@@ -43,8 +43,10 @@ export class TestPaperComponent implements OnInit, DoCheck {
    * @param {number} value - value of answer
    */
   onAnswer(value: number): void {
-    this.questions[this.currentQuestion].value = value;
-    this.currentQuestion += 1;
+    if (this.currentQuestion !== this.questions.length - 1) {
+      this.questions[this.currentQuestion].value = value;
+      this.currentQuestion += 1;
+    }
   }
   onForward(): void {
     if (this.currentQuestion !== this.questions.length - 1) {
