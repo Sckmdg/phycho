@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-test-list',
   templateUrl: './test-list.component.html',
-  styleUrls: ['./test-list.component.css']
+  styleUrls: ['./test-list.component.scss']
 })
-export class TestListComponent implements OnInit {
-
+export class TestListComponent {
+  isToggle = false;
   constructor() { }
-
-  ngOnInit() {
+  toggleResults(): void {
+    this.isToggle = !this.isToggle;
   }
-
 }
