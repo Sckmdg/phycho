@@ -40,6 +40,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
       {title: ['Согласен2', 'Мен макулмун2'], value: 5},
     ];
     }
+
   ngDoCheck() {
     this.lang = Number(localStorage.lang);
     this.calculateProgress();
@@ -55,16 +56,19 @@ export class TestPaperComponent implements OnInit, DoCheck {
       this.currentQuestion += 1;
     }
   }
+
   onForward(): void {
     if (this.currentQuestion !== this.questions.length - 1) {
       this.currentQuestion += 1;
     }
   }
+
   onBack(): void {
     if (this.currentQuestion !== 0) {
       this.currentQuestion -= 1;
     }
   }
+
   calculateProgress(): void {
     let count = 0;
     this.questions.map(item => {

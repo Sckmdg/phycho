@@ -1,16 +1,7 @@
-<div class="container-fluid item-container new-page">
-  <div
-    [ngClass]="{
-      'results':true,
-      'results--folded': !isToggle
-    }"
-  >
-
-    <div class="results-toggle" (click)="toggleResults()">
-      <div *ngIf="isToggle" class="arrow arrow--up"></div>
-      <div *ngIf="!isToggle" class="arrow arrow--down"></div>
-      My Results
-    </div>
-
-  </div>
+<div class="container-fluid item-container new-page page-content">
+  {{testsPhrase[lang]}}
+  <br>
+  <a routerLink="/tests/1">
+    Тест №1
+  </a>
 </div>

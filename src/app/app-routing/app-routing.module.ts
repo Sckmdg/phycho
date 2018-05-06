@@ -7,8 +7,8 @@ import { TermsComponent } from '../components/common/terms/terms.component';
 import { PrivacyComponent } from '../components/common/privacy/privacy.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/person', pathMatch: 'full' },
-  { path: 'person', component: TestPaperComponent },
+  { path: '', redirectTo: '/tests/1', pathMatch: 'full' },
+  { path: 'tests/:id', component: TestPaperComponent },
   { path: 'tests', component: TestListComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'privacy', component: PrivacyComponent }

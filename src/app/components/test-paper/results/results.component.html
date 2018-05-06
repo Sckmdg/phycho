@@ -1,3 +1,14 @@
-<p>
-  results works!
-</p>
+<div
+  [ngClass]="{
+      'results':true,
+      'results--folded': !isToggle
+    }"
+>
+
+  <div class="results-toggle" (click)="toggleResults()">
+    <div *ngIf="isToggle" class="arrow arrow--up"></div>
+    <div *ngIf="!isToggle" class="arrow arrow--down"></div>
+    My Results
+  </div>
+
+</div>

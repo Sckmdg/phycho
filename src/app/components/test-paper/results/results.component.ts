@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',
-  styleUrls: ['./results.component.css']
+  styleUrls: ['./results.component.scss']
 })
-export class ResultsComponent implements OnInit {
-
+export class ResultsComponent {
+  isToggle = false;
   constructor() { }
 
-  ngOnInit() {
+  toggleResults(): void {
+    this.isToggle = !this.isToggle;
   }
 
 }
