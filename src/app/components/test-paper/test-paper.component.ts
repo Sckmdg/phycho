@@ -1,4 +1,5 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 import { Question } from '../../classes/question';
 import { Answer } from '../../classes/answer';
 import { LanguageService } from '../../services/language.service';
@@ -18,7 +19,8 @@ export class TestPaperComponent implements OnInit, DoCheck {
   currentQuestion: number;
   currentPercent: number;
   constructor(
-    private langService: LanguageService
+    private langService: LanguageService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -54,6 +56,9 @@ export class TestPaperComponent implements OnInit, DoCheck {
     if (this.currentQuestion !== this.questions.length - 1) {
       this.questions[this.currentQuestion].value = value;
       this.currentQuestion += 1;
+    } else {
+      this.questions[this.currentQuestion].value = value;
+      this.router.navigate(['/feedback']);
     }
   }
 

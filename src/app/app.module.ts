@@ -14,6 +14,7 @@ import { ResultsComponent } from './components/test-paper/results/results.compon
 import { TestListComponent } from './components/test-list/test-list.component';
 import { TermsComponent } from './components/common/terms/terms.component';
 import { PrivacyComponent } from './components/common/privacy/privacy.component';
+import { FormFeedbackComponent } from './components/form-feedback/form-feedback.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PrivacyComponent } from './components/common/privacy/privacy.component'
     ResultsComponent,
     TestListComponent,
     TermsComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    FormFeedbackComponent
   ],
   imports: [
     BrowserModule,
