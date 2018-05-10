@@ -18,3 +18,8 @@ body {
   color: white;
   min-height: 380px;
 }
+
+.item-container {
+  padding: 60px 0;
+  position: relative;
+}

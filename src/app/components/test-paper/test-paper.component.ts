@@ -24,6 +24,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
   ) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.currentQuestion = 0;
     this.lang = this.langService.getLanguage();
     this.title = ['Моя личность 100 предметов', 'Менин Personality 100-пункту'];
