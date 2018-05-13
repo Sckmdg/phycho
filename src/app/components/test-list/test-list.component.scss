@@ -22,6 +22,10 @@
     color: #181a27;
     cursor: default;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .tests {

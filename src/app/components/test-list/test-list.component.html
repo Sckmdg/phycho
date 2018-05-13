@@ -16,7 +16,7 @@
 
   <div class="tests">
     <div class="col-xs-12 col-sm-4 col-lg-4 item-card-container" *ngFor="let test of tests">
-      <div class="item-card">
+      <div class="item-card" *ngIf="test.tags.includes(selectedTag)">
         <h3>{{test.title[lang]}}</h3>
 
         <div class="time">
