@@ -1,10 +1,13 @@
-import {Component, DoCheck} from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
+// import { LanguageService } from '../../services/language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-feedback',
   templateUrl: './form-feedback.component.html',
-  styleUrls: ['./form-feedback.component.css']
+  styleUrls: ['./form-feedback.component.scss']
 })
+
 export class FormFeedbackComponent implements DoCheck {
   lang = 0;
   title = ['Помогите нам улучшить наши исследования', 'Келгиле, биздин изилдөө жакшыртууга жардам берет'];
@@ -15,9 +18,16 @@ export class FormFeedbackComponent implements DoCheck {
   country = ['Я родился в', 'Мен төрөлгөм'];
   gender = ['Пол', 'Калаасы'];
 
-  constructor() { }
+  constructor(
+    // private langService: LanguageService,
+    private router: Router
+  ) { }
 
   ngDoCheck() {
     this.lang = Number(localStorage.lang);
+  }
+
+  onSubmit() {
+    // this.router.navigate(['/results']);
   }
 }
