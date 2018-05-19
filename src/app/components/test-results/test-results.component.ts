@@ -1,5 +1,6 @@
 import { Component, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
+// import { Info} from '../../classes/info';
 
 @Component({
   selector: 'app-test-results',
