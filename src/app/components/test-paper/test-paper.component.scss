@@ -74,3 +74,25 @@
 .nav-right {
   right: 25px;
 }
+
+@media (max-width: 400px) {
+  .question {
+    padding: 1em;
+  }
+
+  .options {
+    width: 100%;
+  }
+
+  .navigation {
+    top: 16%;
+  }
+
+  .nav-right {
+    right: 5px;
+  }
+
+  .nav-left {
+    left: 5px;
+  }
+}

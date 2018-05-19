@@ -4,7 +4,7 @@ footer {
   color: #fff;
   background-color: #181a27;
   padding: 20px 0;
-  height: 244px;
+  height: 100%;
 }
 
 p {
@@ -31,4 +31,10 @@ a {
   text-decoration: none;
   color: #ffffff;
   font-size: 12px;
+}
+
+@media (max-width: 400px) {
+  .row {
+    display: block;
+  }
 }
