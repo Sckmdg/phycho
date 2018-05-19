@@ -28,6 +28,6 @@ export class FormFeedbackComponent implements DoCheck {
   }
 
   onSubmit() {
-    // this.router.navigate(['/results']);
+    this.router.navigate(['/results']);
   }
 }

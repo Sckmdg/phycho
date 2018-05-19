@@ -6,7 +6,7 @@ import { TestListComponent } from '../components/test-list/test-list.component';
 import { TermsComponent } from '../components/common/terms/terms.component';
 import { PrivacyComponent } from '../components/common/privacy/privacy.component';
 import { FormFeedbackComponent } from '../components/form-feedback/form-feedback.component';
-// import { ResultsComponent } from '../components/results/results.component';
+import { TestResultsComponent } from '../components/test-results/test-results.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/tests/1', pathMatch: 'full' },
@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'terms', component: TermsComponent },
   { path: 'privacy', component: PrivacyComponent },
   { path: 'feedback', component: FormFeedbackComponent },
-  // { path: 'results', component: ResultsComponent }
+  { path: 'results', component: TestResultsComponent }
 ];
 
 @NgModule({
