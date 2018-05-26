@@ -16,6 +16,7 @@ import { TermsComponent } from './components/common/terms/terms.component';
 import { PrivacyComponent } from './components/common/privacy/privacy.component';
 import { FormFeedbackComponent } from './components/form-feedback/form-feedback.component';
 import { TestResultsComponent } from './components/test-results/test-results.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TestResultsComponent } from './components/test-results/test-results.com
     TermsComponent,
     PrivacyComponent,
     FormFeedbackComponent,
-    TestResultsComponent
+    TestResultsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

@@ -7,9 +7,11 @@ import { TermsComponent } from '../components/common/terms/terms.component';
 import { PrivacyComponent } from '../components/common/privacy/privacy.component';
 import { FormFeedbackComponent } from '../components/form-feedback/form-feedback.component';
 import { TestResultsComponent } from '../components/test-results/test-results.component';
+import { WelcomeComponent } from '../components/welcome/welcome.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/tests/1', pathMatch: 'full' },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: 'welcome', component: WelcomeComponent },
   { path: 'tests/:id', component: TestPaperComponent },
   { path: 'tests', component: TestListComponent },
   { path: 'terms', component: TermsComponent },
