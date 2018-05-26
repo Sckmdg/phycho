@@ -28,7 +28,7 @@
     >
   </div>
 
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="options" *ngFor="let answer of answers">
       <div class="option-container">
         <div
@@ -46,4 +46,11 @@
 
 </div>
 
-<app-results></app-results>
+<app-results
+  [extraversion]="extraversion"
+  [neuroticism]="neuroticism"
+  [openness]="openness"
+  [consciousness]="consciousness"
+  [friendly]="friendly"
+>
+</app-results>

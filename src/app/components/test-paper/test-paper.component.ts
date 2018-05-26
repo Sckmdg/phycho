@@ -18,6 +18,12 @@ export class TestPaperComponent implements OnInit, DoCheck {
   title: [String];
   currentQuestion: number;
   currentPercent: number;
+  extraversion = 0;
+  neuroticism = 0;
+  openness = 0;
+  consciousness = 0;
+  friendly = 0;
+
   constructor(
     private langService: LanguageService,
     private router: Router
@@ -36,17 +42,16 @@ export class TestPaperComponent implements OnInit, DoCheck {
       {question: ['Вопрос5', 'Суроо5'], value: null}
     ];
     this.answers = [
-      {title: ['Не согласен1', 'Макул эмесмин1'], value: 1},
-      {title: ['Не согласен2', 'Макул эмесмин2'], value: 2},
-      {title: ['Можно', 'Алат '], value: 3},
-      {title: ['Согласен1', 'Мен макулмун1'], value: 4},
-      {title: ['Согласен2', 'Мен макулмун2'], value: 5},
+      {title: ['Нет, это не обо мне', ''], value: 1},
+      {title: ['Иногда это обо мне, иногда — нет', ''], value: 2},
+      {title: ['Да, это точно обо мне', ' '], value: 3}
     ];
     }
 
   ngDoCheck() {
     this.lang = Number(localStorage.lang);
     this.calculateProgress();
+    this.calculateResults();
   }
 
   /**
@@ -83,6 +88,30 @@ export class TestPaperComponent implements OnInit, DoCheck {
       }
     });
     this.currentPercent = count * 100 / this.questions.length;
+  }
+
+  calculateResults(): void {
+    this.questions.map((item, key) => {
+      if (key % 5 === 0) {
+        this.extraversion = item.value * 100 / 16;
+      }
+
+      if ((key + 1) % 5 === 0) {
+        this.neuroticism = item.value * 100 / 16;
+      }
+
+      if ((key + 2) % 5 === 0) {
+        this.openness = item.value * 100 / 16;
+      }
+
+      if ((key + 3) % 5 === 0) {
+        this.consciousness = item.value * 100 / 16;
+      }
+
+      if ((key + 4) % 5 === 0) {
+        this.friendly = item.value * 100 / 16;
+      }
+    });
   }
 
 }
