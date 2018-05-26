@@ -64,7 +64,7 @@ export class TestPaperComponent implements OnInit, DoCheck {
       this.currentQuestion += 1;
     } else {
       this.questions[this.currentQuestion].value = value;
-      this.router.navigate(['/feedback']);
+      this.router.navigate(['/voted']);
     }
   }
 
