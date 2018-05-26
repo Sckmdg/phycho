@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./privacy.component.css']
 })
 export class PrivacyComponent implements OnInit {
-
+  first = false;
+  second = false;
   constructor() { }
 
   ngOnInit() {
