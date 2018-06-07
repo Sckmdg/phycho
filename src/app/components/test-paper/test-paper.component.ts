@@ -13,9 +13,9 @@ import { LanguageService } from '../../services/language.service';
 
 export class TestPaperComponent implements OnInit, DoCheck {
   lang: number;
-  questions: Question[];
-  answers: Answer[];
-  title: [String];
+  questions: any;
+  answers: any;
+  title: any;
   currentQuestion: number;
   currentPercent: number;
   extraversion = 0;
@@ -46,6 +46,16 @@ export class TestPaperComponent implements OnInit, DoCheck {
       {title: ['Иногда это обо мне, иногда — нет', ''], value: 2},
       {title: ['Да, это точно обо мне', ' '], value: 3}
     ];
+
+    this.langService.getQuestions(1)
+      .subscribe(
+        response => {
+          console.log(response); // TODO check this
+          // this.title = response.name;
+          // this.questions = response.questions;
+        },
+        error => console.log(error)
+      );
     }
 
   ngDoCheck() {
